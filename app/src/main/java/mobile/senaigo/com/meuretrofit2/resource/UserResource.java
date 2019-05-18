@@ -1,27 +1,27 @@
 package mobile.senaigo.com.meuretrofit2.resource;
 
-import java.util.List;
+        import java.util.List;
 
-import mobile.senaigo.com.meuretrofit2.model.User;
-import retrofit2.Call;
-import retrofit2.http.Body;
-import retrofit2.http.DELETE;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Path;
+        import mobile.senaigo.com.meuretrofit2.model.User;
+        import retrofit2.Call;
+        import retrofit2.http.Body;
+        import retrofit2.http.DELETE;
+        import retrofit2.http.GET;
+        import retrofit2.http.POST;
+        import retrofit2.http.PUT;
+        import retrofit2.http.Path;
 
 public interface UserResource {
 
-    @GET("posts")
+    @GET("users")
     Call<List<User>> get();
 
-    @POST("posts")
+    @POST("users")
     Call<User> post(@Body User user);
 
-    @PUT("posts/{id}")
+    @PUT("users/{id}")
     Call<User> put(@Body User user, @Path("id") Integer id);
 
-    @DELETE("posts/{id}")
+    @DELETE("users/{id}")
     Call<Void> delete(@Path("id") Integer id);
 }

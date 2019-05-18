@@ -9,56 +9,60 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
         <EditText
             android:id="@+id/txtUserId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="@string/hint_txt_id"/>
+            android:hint="@string/hint_txt_id"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/txtTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="@string/hint_txt_username"/>
+            android:hint="@string/hint_txt_username"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/txtBody"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="@string/hint_txt_data"/>
+            android:hint="@string/hint_txt_data"
+            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/btnAddUser"
             android:layout_width="match_parent"
-            android:onClick="addUser"
             android:layout_height="wrap_content"
+            android:onClick="addUser"
             android:text="@string/btn_txt_addUser" />
 
         <Button
             android:id="@+id/btnEditar"
             android:layout_width="match_parent"
-            android:onClick="editar"
             android:layout_height="wrap_content"
+            android:onClick="editar"
             android:text="@string/btn_editar" />
+
         <Button
             android:id="@+id/btnExcluir"
             android:layout_width="match_parent"
-            android:onClick="excluir"
             android:layout_height="wrap_content"
+            android:onClick="excluir"
             android:text="@string/btn_excluir" />
 
         <ListView
             android:id="@+id/listViewUser"
             android:layout_width="match_parent"
-            android:layout_height="428dp" />
+            android:layout_height="251dp" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
